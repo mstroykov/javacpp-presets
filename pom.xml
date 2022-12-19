@@ -1253,7 +1253,8 @@
         <module>scipy</module>
         <module>gym</module>
         <module>llvm</module>
-        <module>libffi</module>
+	<module>libffi</module>
+	<module>libpostal</module>
         <module>leptonica</module>
         <module>tesseract</module>
         <module>cuda</module>

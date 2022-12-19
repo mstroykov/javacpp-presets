@@ -33,6 +33,14 @@ case $PLATFORM in
         make -j $MAKEJ V=0
         make install
         ;;
+    linux-ppc64le)
+        ./bootstrap.sh
+	CC="powerpc64le-linux-gnu-gcc -m64 -mpower8-vector"
+        ./configure --prefix=$INSTALL_PATH --disable-data-download --disable-sse2 --host=powerpc64le-linux-gnu --build=ppc64le-linux
+        #./configure --prefix=$INSTALL_PATH --datadir=[...some dir with a few GB of space...]
+	make -j $MAKEJ V=0
+        make install
+        ;;
     linux-x86_64)
         ./bootstrap.sh
         ./configure --prefix=$INSTALL_PATH --disable-data-download
